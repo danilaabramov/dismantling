@@ -574,6 +574,11 @@ td:nth-child(3) {
     font-size: 18px;
 }
 
+.gradient {
+    height: 551px;
+    width: 100%;
+}
+
 .comment-text {
     overflow: hidden;
     text-overflow: ellipsis;
