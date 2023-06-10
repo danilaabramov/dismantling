@@ -123,11 +123,12 @@ export default function HomePage() {
         </marquee>
 
         {/* Заголовок */}
-        <div className="section-title" id="section-1">
+        <div className="section-title" id="services">
             <h1>Услуги</h1>
         </div>
         {/* Таблица услуг */}
         <table>
+            <tbody>
             <tr>
                 <td>01</td>
                 <td>Демонтаж сантехкабин</td>
@@ -183,11 +184,12 @@ export default function HomePage() {
                     </ul>
                 </td>
             </tr>
+            </tbody>
         </table>
 
 
         {/* Заголовок */}
-        <div className="section-title" id="section-2">
+        <div className="section-title" id="examples">
             <h1>Примеры работ</h1>
         </div>
         {/* Секция примеров услуг */}
@@ -222,7 +224,7 @@ export default function HomePage() {
         </section>
 
         {/* Секция отзывов */}
-        <section className="comments" id="section-3">
+        <section className="comments" id="reviews">
             {/* Заголовок */}
             <div className="section-title">
                 <h1>Отзывы</h1>
@@ -249,7 +251,7 @@ export default function HomePage() {
         </section>
 
         {/* Форма для связи с клиентом */}
-        <form className="form" id="section-4">
+        <form className="form" id="exit">
             <div className="form-title">ВЫЕЗДНОЙ СПЕЦИАЛИСТ В ЛЮБОМ РАЙОНЕ САМАРЫ С ВЫЕЗДОМ ЧЕРЕЗ МИНУТУ</div>
 
             <div className="form__input-group">

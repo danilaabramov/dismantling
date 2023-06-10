@@ -487,6 +487,8 @@ a > .logo {
     .top-active-mobile-buttons {
         opacity: 1;
         transition: opacity .1s;
+        overflow: scroll;
+        height: calc(100vh - 71px);
     }
 }
 

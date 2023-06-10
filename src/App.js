@@ -1,8 +1,9 @@
-import {useEffect, useState, useRef} from "react";
+import {useEffect, useState} from "react";
 import {Routes, Route, Link} from 'react-router-dom';
 import ButtonBar from "./components/ButtonBar";
 import MenuIcon from "./icons/menu";
 import HomePage from "./pages/HomePage";
+import { HashLink } from 'react-router-hash-link';
 
 function App() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -39,18 +40,18 @@ function App() {
                     </div>
                     <div className='main-header-container'>
                         <div className='main-header-links' style={{opacity: animate ? 1 : 0}}>
-                            <a href="#section-1">
+                            <HashLink smooth to='/#services'>
                                 <ButtonBar text='Услуги'/>
-                            </a>
-                            <a href="#section-2">
-                                <ButtonBar  text='Примеры'/>
-                            </a>
-                            <a href="#section-3">
+                            </HashLink>
+                            <HashLink smooth to="/#examples">
+                                <ButtonBar text='Примеры'/>
+                            </HashLink>
+                            <HashLink smooth to="/#reviews">
                                 <ButtonBar text='Отзывы'/>
-                            </a>
-                            <a href="#section-4">
+                            </HashLink>
+                            <HashLink smooth to="/#exit">
                                 <ButtonBar text='Выезд'/>
-                            </a>
+                            </HashLink>
                         </div>
                     </div>
                     <div className='right-header-container' style={{opacity: animate ? 1 : 0}}>
@@ -62,18 +63,18 @@ function App() {
 
                 <div className={activeBar ? 'top-active-mobile-buttons' : 'top-mobile-buttons'}>
                     <div>
-                        <a href="#section-1" onClick={() => setActiveBar(a => !a)}>
+                        <HashLink smooth to="/#services" onClick={() => setActiveBar(a => !a)}>
                             <ButtonBar text='Услуги' menu/>
-                        </a>
-                        <a href="#section-2" onClick={() => setActiveBar(a => !a)}>
-                            <ButtonBar  text='Примеры' menu/>
-                        </a>
-                        <a href="#section-3" onClick={() => setActiveBar(a => !a)}>
+                        </HashLink>
+                        <HashLink smooth to="/#examples" onClick={() => setActiveBar(a => !a)}>
+                            <ButtonBar text='Примеры' menu/>
+                        </HashLink>
+                        <HashLink smooth to="/#reviews" onClick={() => setActiveBar(a => !a)}>
                             <ButtonBar text='Отзывы' menu/>
-                        </a>
-                        <a href="#section-4" onClick={() => setActiveBar(a => !a)}>
+                        </HashLink>
+                        <HashLink smooth to="#/exit" onClick={() => setActiveBar(a => !a)}>
                             <ButtonBar text='Выезд' menu/>
-                        </a>
+                        </HashLink>
                     </div>
                 </div>
 
@@ -92,5 +93,3 @@ function App() {
 }
 
 export default App;
-
-
